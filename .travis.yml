@@ -29,10 +29,10 @@ script:
 
   # Ansible syntax check.
   ###- 'docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook /etc/ansible/roles/role_under_test/tests/test.yml -vvv --syntax-check'
-  
+
   #Print out test file
   # - 'docker exec "$(cat ${container_id})" /etc/ansible/roles/role_under_test/tests/test.yml'
-  
+
   # Test role.
   ####- 'docker exec "$(cat ${container_id})" ansible-playbook /etc/ansible/roles/role_under_test/tests/test.yml'
 
@@ -55,8 +55,8 @@ notifications:
     on_success: always
     on_failure: always
     rooms:
-      - gbckenya:YmOMhqL9O6UHSSG1vrdkQXkL#general
-      - gbckenya:YmOMhqL9O6UHSSG1vrdkQXkL#ansible
+      - buluma:QWpyLHvuvJe5aduZtGs7euUa#general
+      - buluma:QWpyLHvuvJe5aduZtGs7euUa#ansible
   email:
     recipients:
       - me@buluma.me.ke

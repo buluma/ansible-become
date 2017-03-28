@@ -1,7 +1,8 @@
 ---
 
 #- hosts: all
-#  sudo: yes
+   become: true
+   become_method: sudo
 #  roles:
 #    - common
 
@@ -16,17 +17,18 @@
     - always
 
 - hosts: tag_app_mesosmaster
-  sudo: yes
+  become: true
   roles:
     - mesos-common
     - mesos-master
   vars:
-    paas_apps_fqdn: 'paas.mozilla.community'
+    # paas_apps_fqdn: 'paas.mozilla.community'
+    paas_apps_fqdn: 'shadownet.buluma.me.ke'
   tags:
     - mesos-master
 
 - hosts: tag_app_mesosslave
-  sudo: yes
+  become: true
   roles:
     - mesos-common
     - mesos-slave
