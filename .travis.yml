@@ -55,10 +55,9 @@ notifications:
     on_success: always
     on_failure: always
     rooms:
-      - buluma:QWpyLHvuvJe5aduZtGs7euUa#general
-      - buluma:QWpyLHvuvJe5aduZtGs7euUa#ansible
+      - gbckenya:YmOMhqL9O6UHSSG1vrdkQXkL#travis-ci
   email:
     recipients:
       - me@buluma.me.ke
     on_success: always # default: change
-on_failure: always # default: always
+    on_failure: always # default: always
